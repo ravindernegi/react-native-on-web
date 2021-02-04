@@ -8,6 +8,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  banner: {
+    borderRadius: 8,
+    backgroundColor: 'blue',
+    alignContent: 'center',
+    alignItems: 'center',
+    color: '#fff',
+    padding: 20,
+    fontSize: '3em',
+  },
   button: {
     backgroundColor: 'blue',
     alignContent: 'center',
@@ -16,49 +25,44 @@ const styles = StyleSheet.create({
     shadowColor: '#ddd',
     shadowOffset: 3,
     shadowOpacity: 1,
+    color: '#fff',
+    padding: 20,
   },
 });
+
+function Banner() {
+  return (
+    <View style={styles.row}>
+      <View style={styles.col}>
+        <Text style={styles.banner}>Hello ReactNative</Text>
+      </View>
+    </View>
+  );
+}
 function App() {
   return (
     <MainLayout>
+      <Banner />
       <View style={styles.row}>
         <View style={styles.col}>
-          <View style={styles.button}>
-            <Text
-              style={{
-                textAlign: 'center',
-                color: '#fff',
-                margin: 30,
-              }}
-            >
-              1
-            </Text>
-          </View>
+          <Text style={styles.button}>1</Text>
         </View>
         <View style={styles.col}>
-          <View style={styles.button}>
-            <Text
-              style={{
-                color: '#fff',
-                margin: 30,
-              }}
-            >
-              2
-            </Text>
-          </View>
+          <View style={styles.button}>2</View>
         </View>
         <View style={styles.col}>
-          <View style={styles.button}>
-            <Text
-              style={{
-                textAlign: 'center',
-                color: '#fff',
-                margin: 30,
-              }}
-            >
-              3
-            </Text>
-          </View>
+          <View style={styles.button}>3</View>
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View style={styles.col}>
+          <Text style={styles.button}>1</Text>
+        </View>
+        <View style={styles.col}>
+          <View style={styles.button}>2</View>
+        </View>
+        <View style={styles.col}>
+          <View style={styles.button}>3</View>
         </View>
       </View>
     </MainLayout>

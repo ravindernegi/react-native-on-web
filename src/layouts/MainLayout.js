@@ -7,12 +7,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#EBEFEA',
     flex: 1,
   },
+  flex: {
+    flex: 1,
+  },
 });
 function MainLayout(props) {
   return (
     <View style={styles.container}>
       <Header />
-      <View>{props.children}</View>
+      <View style={styles.flex}>{props.children}</View>
       <Footer />
     </View>
   );
